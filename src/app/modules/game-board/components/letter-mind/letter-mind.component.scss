@@ -1,0 +1,87 @@
+.main {
+  display: flex;
+  flex-flow: column;
+  height: calc(100vh - 84px);
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  .letterPanel.current {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0 2em;
+    margin: 0 -2em;
+    border-radius: 0.3em;
+  }
+
+  .letterPanel {
+    display: flex;
+    flex-flow: row;
+
+    .letter.current {
+      border: 2px solid rgba(255,255,255,1);
+    }
+
+    .letter {
+      border: 2px solid transparent;
+      border-radius: 0.3em;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 2em;
+      width: 2.2em;
+      height: 2.2em;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.3);
+      margin: 0.1em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .correct {
+      background: #0f0;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .exists {
+      background: #ba0;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .keyboard {
+    display: flex;
+    flex-flow: column;
+
+    .keyline {
+      display: flex;
+      flex-flow: row;
+
+      .key.correct {
+        background: #0f0;
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      .key.exists {
+        background: #ba0;
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      .key.missing {
+        background: #888;
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      .key {
+        font-size: 1.5em;
+        background: rgba(0,0,0,0.9);
+        color: #fff;
+        text-transform: uppercase;
+        width: 2em;
+        height: 2em;
+        margin: 0.1em;
+        flex: 1;
+      }
+    }
+  }
+}

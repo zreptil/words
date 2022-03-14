@@ -1,0 +1,19 @@
+<div class="main">
+  <div class="wordPanel">
+    <div [class]="classForLine(line)" *ngFor="let word of wordList; let line = index">
+      <div [class]="classForLetter(word, line, idx)" *ngFor="let letter of word; let idx=index">{{letter}}</div>
+    </div>
+  </div>
+
+  <div class="keyboard">
+    <div class="keyline" *ngFor="let line of keyboard">
+      <ng-container *ngFor="let key of line">
+        <button mat-raised-button *ngIf="key.length === 1" (click)="keyClick(key)" [class]="classForKey(key)">{{key}}</button>
+        <button mat-raised-button *ngIf="key.length > 1" (click)="keyClick(key)" class="key">
+          <mat-icon>{{key}}</mat-icon>
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
