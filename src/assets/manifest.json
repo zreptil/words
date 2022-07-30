@@ -1,0 +1,17 @@
+{
+  "icons": [
+    {
+      "sizes": "176x176",
+      "src": "img/favicon.png",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
+  "name": "Words",
+  "permissions": [],
+  "prefer_related_applications": true,
+  "related_applications": [],
+  "short_name": "Words",
+  "start_url": "/index.html",
+  "url": "https://words.zreptil.de/"
+}

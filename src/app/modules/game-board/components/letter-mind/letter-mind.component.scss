@@ -6,6 +6,15 @@
   align-items: center;
   justify-content: space-between;
 
+  .wordPanel {
+    display: flex;
+    flex-flow: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 2em;
+    justify-content: flex-end;
+  }
+
   .letterPanel.current {
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 0 2em;
@@ -13,12 +22,33 @@
     border-radius: 0.3em;
   }
 
+  .letterPanel.wid6 {
+    font-size: 0.9em;
+  }
+
+  .letterPanel.wid7 {
+    font-size: 0.8em;
+  }
+
+  .letterPanel.wid8 {
+    font-size: 0.7em;
+  }
+
+  .letterPanel.wid9 {
+    font-size: 0.6em;
+  }
+
+  .letterPanel.wid10 {
+    font-size: 0.6em;
+  }
+
   .letterPanel {
     display: flex;
     flex-flow: row;
+    max-width: 100%;
 
     .letter.current {
-      border: 2px solid rgba(255,255,255,1);
+      border: 2px solid rgba(255, 255, 255, 1);
     }
 
     .letter {
@@ -30,8 +60,8 @@
       justify-content: center;
       text-transform: uppercase;
       font-size: 2em;
-      width: 2.2em;
-      height: 2.2em;
+      width: 2em;
+      height: 2em;
       font-weight: bold;
       background: rgba(255, 255, 255, 0.3);
       margin: 0.1em;
@@ -52,6 +82,7 @@
   .keyboard {
     display: flex;
     flex-flow: column;
+    max-width: 100%;
 
     .keyline {
       display: flex;
@@ -68,20 +99,40 @@
       }
 
       .key.missing {
-        background: #888;
+        background: rgba(255, 255, 255, 0.1);
         color: rgba(0, 0, 0, 0.7);
       }
+    }
+  }
 
+  .key {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5em;
+    align-self: center;
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-transform: uppercase;
+    width: 2em;
+    height: 2em;
+    margin: 0.1em;
+    flex: 1;
+    cursor: pointer;
+  }
+}
+
+@media(max-device-width: 27em) {
+  .main {
+    font-size: 0.7em;
+
+    .keyboard {
       .key {
-        font-size: 1.5em;
-        background: rgba(0,0,0,0.9);
-        color: #fff;
-        text-transform: uppercase;
-        width: 2em;
-        height: 2em;
-        margin: 0.1em;
-        flex: 1;
+        height: 4em;
       }
     }
   }
 }
+

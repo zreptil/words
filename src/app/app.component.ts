@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {GlobalVarsService} from './_services/global-vars.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'words';
+
+  constructor(public gv: GlobalVarsService) {
+
+  }
 }
